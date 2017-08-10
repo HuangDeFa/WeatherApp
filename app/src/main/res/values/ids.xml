@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="main_page_bottom" type="id"/>
+    <item name="main_page_content" type="id"/>
+    <item name="main_page_citymanage" type="id"/>
+    <item name="main_page_menu" type="id"/>
+    <item name="city_page_head" type="id"/>
+    <item name="city_page_list" type="id"/>
+</resources>
