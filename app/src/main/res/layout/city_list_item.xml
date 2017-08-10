@@ -2,7 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+              android:layout_height="wrap_content"
+              android:paddingBottom="10dp"
+              android:background="@drawable/round_border"
+    >
   <TextView
       android:id="@id/city_list_item_name"
       android:layout_width="wrap_content"
@@ -23,6 +26,7 @@
         android:textSize="12dp"
         />
     <TextView
+        android:id="@id/city_list_item_temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -39,15 +43,27 @@
       android:layout_height="0.1dp"
       android:background="#bfbfbf"
       android:layout_below="@id/city_list_item_region"
-      android:layout_marginTop="20dp"
+      android:layout_marginTop="15dp"
       />
   <TextView
+      android:id="@id/city_list_item_air"
       android:layout_below="@id/city_list_item_region"
-      android:layout_marginTop="40dp"
+      android:layout_marginTop="30dp"
       android:layout_marginLeft="18dp"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:textSize="12sp"
       tools:text="空气优|湿度81%|西南风3级"
+      />
+  <TextView
+      android:id="@id/city_list_item_temperatures"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_below="@id/city_list_item_region"
+      android:layout_marginTop="30dp"
+      android:layout_marginRight="18dp"
+      android:textSize="12sp"
+      tools:text="30/35"
       />
 </RelativeLayout>
