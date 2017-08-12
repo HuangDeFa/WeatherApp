@@ -11,4 +11,15 @@
     <item name="city_list_item_temperature" type="id"/>
     <item name="city_list_item_air" type="id"/>
     <item name="city_list_item_temperatures" type="id"/>
+    <item name="city_page_edit" type="id"/>
+    <item name="city_page_back" type="id"/>
+    <item name="city_page_fab" type="id"/>
+    <item name="city_page_cancel" type="id"/>
+    <item name="city_page_confirm" type="id"/>
+    <item name="city_page_title" type="id"/>
+    <item name="city_list_item_delete" type="id"/>
+    <item name="city_list_item_move" type="id"/>
+    <item name="city_list_item_line" type="id"/>
+    <item name="city_list_item_location" type="id"/>
+    <item name="city_list_item_weather" type="id"/>
 </resources>

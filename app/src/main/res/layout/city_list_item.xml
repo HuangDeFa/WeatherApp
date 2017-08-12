@@ -6,21 +6,41 @@
               android:paddingBottom="10dp"
               android:background="@drawable/round_border"
     >
+  <ImageView
+      android:visibility="visible"
+      android:layout_width="20dp"
+      android:layout_height="20dp"
+      android:id="@id/city_list_item_delete"
+      android:src="@mipmap/delete"
+      android:layout_centerVertical="true"
+      android:layout_marginLeft="20dp"
+      />
   <TextView
       android:id="@id/city_list_item_name"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_toRightOf="@id/city_list_item_delete"
       android:textSize="18sp"
       tools:text="恩平"
       android:layout_marginTop="18dp"
       android:layout_marginLeft="18dp"
       />
+    <ImageView
+        android:id="@id/city_list_item_location"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/city_list_item_name"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="3dp"
+        android:src="@mipmap/location_on"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:layout_marginLeft="18dp"
         android:layout_below="@id/city_list_item_name"
+        android:layout_alignLeft="@id/city_list_item_name"
         android:id="@id/city_list_item_region"
         tools:text="江门，广东"
         android:textSize="12dp"
@@ -36,7 +56,16 @@
         android:typeface="sans"
         tools:text="30"
         />
+    <ImageView
+        android:id="@id/city_list_item_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginRight="80dp"
+        android:src="@mipmap/weather_cloudy"
+        android:layout_alignParentRight="true"/>
   <View
+      android:id="@id/city_list_item_line"
       android:layout_marginLeft="15dp"
       android:layout_marginRight="15dp"
       android:layout_width="match_parent"
@@ -49,7 +78,7 @@
       android:id="@id/city_list_item_air"
       android:layout_below="@id/city_list_item_region"
       android:layout_marginTop="30dp"
-      android:layout_marginLeft="18dp"
+      android:layout_alignLeft="@id/city_list_item_name"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:textSize="12sp"
@@ -65,5 +94,15 @@
       android:layout_marginRight="18dp"
       android:textSize="12sp"
       tools:text="30/35"
+      />
+  <ImageView
+      android:visibility="gone"
+      android:layout_width="20dp"
+      android:layout_height="20dp"
+      android:id="@id/city_list_item_move"
+      android:src="@mipmap/move"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:layout_marginRight="20dp"
       />
 </RelativeLayout>
