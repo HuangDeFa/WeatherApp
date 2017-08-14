@@ -1,71 +1,90 @@
 package com.kenzz.weatherapp.beans;
 
+import java.util.List;
+
 /**
  * Created by ken.huang on 8/14/2017.
  */
 
 public class WeatherModel {
 
-    aqi mAqi;
+   private AQIModel.AirQualityWrapper aqi;
 
-    String status;
+   private String status;
 
-    static class aqi{
-     city mCity;
+    private BasicAddress basic;
+
+   private   DailyForecast daily_forecast;
+   private HourForeCast hourly_forecast;
+   private NowWeather now;
+   private LifeSuggestionModle.LifeSuggestionWraper suggesstion;
+
+    public WeatherModel() {
     }
 
-    static class city{
-        int aqi;
-        int co;
-        int no2;
-        int o3;
-        float pm10;
-        float pm25;
-        String qlty;
-        int so2;
+    public WeatherModel(AQIModel.AirQualityWrapper aqi, String status, BasicAddress basic, DailyForecast daily_forecast, HourForeCast hourly_forecast, NowWeather now, LifeSuggestionModle.LifeSuggestionWraper suggesstion) {
+        this.aqi = aqi;
+        this.status = status;
+        this.basic = basic;
+        this.daily_forecast = daily_forecast;
+        this.hourly_forecast = hourly_forecast;
+        this.now = now;
+        this.suggesstion = suggesstion;
     }
 
-    static class basic{
-        String city;
-        String cnty;
-        String id;
-        String lat;
-        String lon;
-
+    public AQIModel.AirQualityWrapper getAqi() {
+        return aqi;
     }
 
-    static class astor{
-        String mr;
-        String ms;
-        String sr;
-        String ss;
+    public void setAqi(AQIModel.AirQualityWrapper aqi) {
+        this.aqi = aqi;
     }
 
-    static class cond{
-        int code_d;
-        int code_n;
-        String text_d;
-        String text_n;
+    public String getStatus() {
+        return status;
     }
 
-    static class tmp{
-        float max;
-        float min;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    static class wind{
-        int deg;
-        String dir;
-        String sc;
-        int spd;
+    public BasicAddress getBasic() {
+        return basic;
     }
 
-    /*********** Suggestion***************/
-
-    static class suggesstion{
-
+    public void setBasic(BasicAddress basic) {
+        this.basic = basic;
     }
 
-    static class ari{String brf;String text;}
+    public DailyForecast getDaily_forecast() {
+        return daily_forecast;
+    }
 
+    public void setDaily_forecast(DailyForecast daily_forecast) {
+        this.daily_forecast = daily_forecast;
+    }
+
+    public HourForeCast getHourly_forecast() {
+        return hourly_forecast;
+    }
+
+    public void setHourly_forecast(HourForeCast hourly_forecast) {
+        this.hourly_forecast = hourly_forecast;
+    }
+
+    public NowWeather getNow() {
+        return now;
+    }
+
+    public void setNow(NowWeather now) {
+        this.now = now;
+    }
+
+    public LifeSuggestionModle.LifeSuggestionWraper getSuggesstion() {
+        return suggesstion;
+    }
+
+    public void setSuggesstion(LifeSuggestionModle.LifeSuggestionWraper suggesstion) {
+        this.suggesstion = suggesstion;
+    }
 }

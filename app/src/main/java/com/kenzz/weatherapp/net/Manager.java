@@ -2,6 +2,8 @@ package com.kenzz.weatherapp.net;
 
 import android.util.Log;
 
+import com.kenzz.weatherapp.beans.WeatherModel;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -37,15 +39,15 @@ public class Manager {
 
     public void getWeather(String city){
         Api api = mRetrofit.create(Api.class);
-        api.getWeather(city,Api.ApiKey).enqueue(new Callback<ResponseBody>() {
+        api.getWeather(city,Api.ApiKey).enqueue(new Callback<WeatherModel>() {
             @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                Log.d(TAG,response.toString());
+            public void onResponse(Call<WeatherModel> call, Response<WeatherModel> response) {
+               Log.d(TAG,response.toString());
             }
 
             @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Log.d(TAG,t.toString());
+            public void onFailure(Call<WeatherModel> call, Throwable t) {
+
             }
         });
     }
