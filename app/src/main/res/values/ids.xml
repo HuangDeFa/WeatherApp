@@ -22,4 +22,8 @@
     <item name="city_list_item_line" type="id"/>
     <item name="city_list_item_location" type="id"/>
     <item name="city_list_item_weather" type="id"/>
+    <item name="city_search_head" type="id"/>
+    <item name="city_search_hot_label" type="id"/>
+    <item name="city_search_list" type="id"/>
+    <item name="city_search_input" type="id"/>
 </resources>

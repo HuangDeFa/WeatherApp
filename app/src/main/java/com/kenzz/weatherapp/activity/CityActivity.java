@@ -1,5 +1,6 @@
 package com.kenzz.weatherapp.activity;
 
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.RippleDrawable;
@@ -133,6 +134,8 @@ public class CityActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 //TODO: Open a view for city Search
+                Intent intent=new Intent(CityActivity.this,CitySearchActivity.class);
+                startActivity(intent);
             }
         });
     }
