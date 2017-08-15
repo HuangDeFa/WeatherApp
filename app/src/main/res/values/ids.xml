@@ -29,4 +29,10 @@
     <item name="city_hotlist_name" type="id"/>
     <item name="city_hotlist_location" type="id"/>
     <item name="city_searchlist_item_citymsg" type="id"/>
+    <item name="weather_page_head_temperature" type="id"/>
+    <item name="weather_page_head_region" type="id"/>
+    <item name="weather_page_head_aqi" type="id"/>
+    <item name="weather_page_head_wind" type="id"/>
+    <item name="weatehr_page_head_wade" type="id"/>
+    <item name="weather_page_head_ptemp" type="id"/>
 </resources>
