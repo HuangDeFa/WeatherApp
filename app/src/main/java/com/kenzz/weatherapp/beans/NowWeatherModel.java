@@ -1,5 +1,7 @@
 package com.kenzz.weatherapp.beans;
 
+import java.util.List;
+
 /**
  * Created by huangdefa on 15/08/2017.
  */
@@ -37,5 +39,17 @@ public class NowWeatherModel {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public static class NowWeatherModelWrapper{
+        private List<NowWeatherModel> HeWeather5;
+
+        public List<NowWeatherModel> getHeWeather5() {
+            return HeWeather5;
+        }
+
+        public void setHeWeather5(List<NowWeatherModel> heWeather5) {
+            HeWeather5 = heWeather5;
+        }
     }
 }

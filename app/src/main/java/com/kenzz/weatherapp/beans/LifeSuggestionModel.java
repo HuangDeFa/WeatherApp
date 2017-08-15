@@ -1,18 +1,20 @@
 package com.kenzz.weatherapp.beans;
 
+import java.util.List;
+
 /**
  * Created by huangdefa on 15/08/2017.
  */
 
-public class LifeSuggestionModle {
+public class LifeSuggestionModel {
     private BasicAddress basic;
     private String status;
-    private LifeSuggestionWraper suggestion;
+    private LifeSuggestionWrapper suggestion;
 
-    public LifeSuggestionModle() {
+    public LifeSuggestionModel() {
     }
 
-    public LifeSuggestionModle(BasicAddress basic, String status, LifeSuggestionWraper suggestion) {
+    public LifeSuggestionModel(BasicAddress basic, String status, LifeSuggestionWrapper suggestion) {
         this.basic = basic;
         this.status = status;
         this.suggestion = suggestion;
@@ -34,15 +36,15 @@ public class LifeSuggestionModle {
         this.status = status;
     }
 
-    public LifeSuggestionWraper getSuggestion() {
+    public LifeSuggestionWrapper getSuggestion() {
         return suggestion;
     }
 
-    public void setSuggestion(LifeSuggestionWraper suggestion) {
+    public void setSuggestion(LifeSuggestionWrapper suggestion) {
         this.suggestion = suggestion;
     }
 
-    static class LifeSuggestionWraper{
+    public static class LifeSuggestionWrapper {
         private LifeSuggestion comf;
         private LifeSuggestion cw;
         private LifeSuggestion drsg;
@@ -51,10 +53,10 @@ public class LifeSuggestionModle {
         private LifeSuggestion trav;
         private LifeSuggestion uv;
 
-        public LifeSuggestionWraper() {
+        public LifeSuggestionWrapper() {
         }
 
-        public LifeSuggestionWraper(LifeSuggestion comf, LifeSuggestion cw, LifeSuggestion drsg, LifeSuggestion flu, LifeSuggestion sport, LifeSuggestion trav, LifeSuggestion uv) {
+        public LifeSuggestionWrapper(LifeSuggestion comf, LifeSuggestion cw, LifeSuggestion drsg, LifeSuggestion flu, LifeSuggestion sport, LifeSuggestion trav, LifeSuggestion uv) {
             this.comf = comf;
             this.cw = cw;
             this.drsg = drsg;
@@ -118,6 +120,19 @@ public class LifeSuggestionModle {
 
         public void setUv(LifeSuggestion uv) {
             this.uv = uv;
+        }
+
+    }
+
+    public static class LifeSuggestionModelWrapper {
+        private List<LifeSuggestionModel> HeWeather5;
+
+        public List<LifeSuggestionModel> getHeWeather5() {
+            return HeWeather5;
+        }
+
+        public void setHeWeather5(List<LifeSuggestionModel> heWeather5) {
+            HeWeather5 = heWeather5;
         }
     }
 }

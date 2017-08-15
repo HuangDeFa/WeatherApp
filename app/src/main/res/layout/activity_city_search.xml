@@ -26,6 +26,7 @@
             android:src="@mipmap/arrow_back"
             />
         <EditText
+            android:id="@id/city_search_input"
             android:hint="搜索城市"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,9 +50,11 @@
        android:text="热门城市"
        android:layout_below="@id/city_search_head"
        android:layout_marginTop="15dp"
-       android:layout_marginLeft="5dp"
+       android:layout_marginLeft="15dp"
        />
     <android.support.v7.widget.RecyclerView
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
         android:id="@id/city_search_list"
         android:layout_marginTop="2dp"
         android:layout_below="@id/city_search_hot_label"

@@ -14,22 +14,22 @@ public class WeatherModel {
 
     private BasicAddress basic;
 
-   private   DailyForecast daily_forecast;
-   private HourForeCast hourly_forecast;
+   private List<DailyForecast> daily_forecast;
+   private List<HourForeCast> hourly_forecast;
    private NowWeather now;
-   private LifeSuggestionModle.LifeSuggestionWraper suggesstion;
+   private LifeSuggestionModel.LifeSuggestionWrapper suggestion;
 
     public WeatherModel() {
     }
 
-    public WeatherModel(AQIModel.AirQualityWrapper aqi, String status, BasicAddress basic, DailyForecast daily_forecast, HourForeCast hourly_forecast, NowWeather now, LifeSuggestionModle.LifeSuggestionWraper suggesstion) {
+    public WeatherModel(AQIModel.AirQualityWrapper aqi, String status, BasicAddress basic, List<DailyForecast> daily_forecast, List<HourForeCast> hourly_forecast, NowWeather now, LifeSuggestionModel.LifeSuggestionWrapper suggestion) {
         this.aqi = aqi;
         this.status = status;
         this.basic = basic;
         this.daily_forecast = daily_forecast;
         this.hourly_forecast = hourly_forecast;
         this.now = now;
-        this.suggesstion = suggesstion;
+        this.suggestion = suggestion;
     }
 
     public AQIModel.AirQualityWrapper getAqi() {
@@ -56,19 +56,19 @@ public class WeatherModel {
         this.basic = basic;
     }
 
-    public DailyForecast getDaily_forecast() {
+    public List<DailyForecast> getDaily_forecast() {
         return daily_forecast;
     }
 
-    public void setDaily_forecast(DailyForecast daily_forecast) {
+    public void setDaily_forecast(List<DailyForecast> daily_forecast) {
         this.daily_forecast = daily_forecast;
     }
 
-    public HourForeCast getHourly_forecast() {
+    public List<HourForeCast> getHourly_forecast() {
         return hourly_forecast;
     }
 
-    public void setHourly_forecast(HourForeCast hourly_forecast) {
+    public void setHourly_forecast(List<HourForeCast> hourly_forecast) {
         this.hourly_forecast = hourly_forecast;
     }
 
@@ -80,11 +80,23 @@ public class WeatherModel {
         this.now = now;
     }
 
-    public LifeSuggestionModle.LifeSuggestionWraper getSuggesstion() {
-        return suggesstion;
+    public LifeSuggestionModel.LifeSuggestionWrapper getSuggestion() {
+        return suggestion;
     }
 
-    public void setSuggesstion(LifeSuggestionModle.LifeSuggestionWraper suggesstion) {
-        this.suggesstion = suggesstion;
+    public void setSuggestion(LifeSuggestionModel.LifeSuggestionWrapper suggestion) {
+        this.suggestion = suggestion;
+    }
+
+    public static class WeatherModelWrapper{
+        private List<WeatherModel> HeWeather5;
+
+        public List<WeatherModel> getHeWeather5() {
+            return HeWeather5;
+        }
+
+        public void setHeWeather5(List<WeatherModel> heWeather5) {
+            HeWeather5 = heWeather5;
+        }
     }
 }

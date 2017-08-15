@@ -5,10 +5,10 @@ package com.kenzz.weatherapp.beans;
  */
 
 public class AirQuality {
-   private int aqi;
-   private int co;
-   private int no2;
-   private int o3;
+    private int aqi;
+    private int co;
+    private int no2;
+    private int o3;
 
     public AirQuality(int aqi, int co, int no2, int o3, float pm10, float pm25, String qlty, int so2) {
         this.aqi = aqi;
@@ -86,7 +86,7 @@ public class AirQuality {
     }
 
     private float pm10;
-   private float pm25;
-   private String qlty;
-   private int so2;
+    private float pm25;
+    private String qlty;
+    private int so2;
 }

@@ -1,5 +1,7 @@
 package com.kenzz.weatherapp.beans;
 
+import java.util.List;
+
 /**
  * Created by huangdefa on 15/08/2017.
  */
@@ -37,5 +39,17 @@ public class DailyForecastModel {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public static class DailyForecastModelWrapper{
+        private List<DailyForecastModel> HeWeather5;
+
+        public List<DailyForecastModel> getHeWeather5() {
+            return HeWeather5;
+        }
+
+        public void setHeWeather5(List<DailyForecastModel> heWeather5) {
+            HeWeather5 = heWeather5;
+        }
     }
 }

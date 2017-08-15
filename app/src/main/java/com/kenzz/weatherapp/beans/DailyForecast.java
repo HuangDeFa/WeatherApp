@@ -122,7 +122,7 @@ public class DailyForecast {
         Wind = wind;
     }
 
-    static class Astor {
+   public static class Astor {
         private String mr;
         private String ms;
         private String sr;
@@ -171,7 +171,7 @@ public class DailyForecast {
         }
     }
 
-    static class Cond {
+   public static class Cond {
         int code_d;
         int code_n;
         String text_d;
@@ -220,7 +220,7 @@ public class DailyForecast {
         }
     }
 
-    static class Temperature {
+   public static class Temperature {
         float max;
         float min;
 

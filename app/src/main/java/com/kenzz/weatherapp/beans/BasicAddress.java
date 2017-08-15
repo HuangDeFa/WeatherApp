@@ -93,7 +93,7 @@ public class BasicAddress {
         this.update=update;
     }
 
-    static class TimeStamp{
+   public static class TimeStamp{
         //当地时间
         private String loc;
         //UTC 时间

@@ -26,4 +26,7 @@
     <item name="city_search_hot_label" type="id"/>
     <item name="city_search_list" type="id"/>
     <item name="city_search_input" type="id"/>
+    <item name="city_hotlist_name" type="id"/>
+    <item name="city_hotlist_location" type="id"/>
+    <item name="city_searchlist_item_citymsg" type="id"/>
 </resources>

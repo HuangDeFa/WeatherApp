@@ -1,5 +1,7 @@
 package com.kenzz.weatherapp.beans;
 
+import java.util.List;
+
 /**
  * Created by huangdefa on 15/08/2017.
  */
@@ -42,7 +44,7 @@ public class AQIModel {
         this.aqi = aqi;
     }
 
-    static class AirQualityWrapper{
+   public static class AirQualityWrapper{
 
         public AirQuality getCity() {
             return city;
@@ -59,6 +61,18 @@ public class AQIModel {
 
         public AirQualityWrapper(AirQuality city) {
             this.city = city;
+        }
+    }
+
+    public static class AQIModelWrapper{
+        private List<AQIModel> HeWeather5;
+
+        public List<AQIModel> getHeWeather5() {
+            return HeWeather5;
+        }
+
+        public void setHeWeather5(List<AQIModel> heWeather5) {
+            HeWeather5 = heWeather5;
         }
     }
 }

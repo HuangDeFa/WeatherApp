@@ -74,7 +74,7 @@ public class HourForeCast {
         this.wind = wind;
     }
 
-    static class Cond{
+   public static class Cond{
         String code;
         private String txt;
 
