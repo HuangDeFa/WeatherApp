@@ -8,6 +8,8 @@ import com.kenzz.weatherapp.beans.LifeSuggestionModel;
 import com.kenzz.weatherapp.beans.NowWeatherModel;
 import com.kenzz.weatherapp.beans.WeatherModel;
 
+import java.util.List;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Response;

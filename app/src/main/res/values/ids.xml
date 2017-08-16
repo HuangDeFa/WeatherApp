@@ -35,4 +35,16 @@
     <item name="weather_page_head_wind" type="id"/>
     <item name="weatehr_page_head_wade" type="id"/>
     <item name="weather_page_head_ptemp" type="id"/>
+    <item name="weather_page_head_windlabel" type="id"/>
+    <item name="weather_page_head_windlevel" type="id"/>
+    <item name="weather_page_head_wadelabel" type="id"/>
+    <item name="weather_page_head_wadelevel" type="id"/>
+    <item name="weather_page_head_ptemplabel" type="id"/>
+    <item name="weather_page_head_ptemplevel" type="id"/>
+    <item name="weather_page_info_icon" type="id"/>
+    <item name="weather_page_info_day" type="id"/>
+    <item name="weather_page_info_msg" type="id"/>
+    <item name="weather_page_info_temperature" type="id"/>
+    <item name="weather_page_suggestion_label" type="id"/>
+    <item name="weather_page_suggestion_value" type="id"/>
 </resources>
