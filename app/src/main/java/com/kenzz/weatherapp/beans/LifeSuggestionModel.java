@@ -135,16 +135,4 @@ public class LifeSuggestionModel {
             HeWeather5 = heWeather5;
         }
     }
-
-    public static class LifeSuggestionModelWrapper{
-        private List<LifeSuggestionModel> HeWeather5;
-
-        public List<LifeSuggestionModel> getHeWeather5() {
-            return HeWeather5;
-        }
-
-        public void setHeWeather5(List<LifeSuggestionModel> heWeather5) {
-            HeWeather5 = heWeather5;
-        }
-    }
 }
