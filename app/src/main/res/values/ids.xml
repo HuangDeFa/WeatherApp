@@ -47,4 +47,8 @@
     <item name="weather_page_info_temperature" type="id"/>
     <item name="weather_page_suggestion_label" type="id"/>
     <item name="weather_page_suggestion_value" type="id"/>
+    <item name="weather_page_air_aqi" type="id"/>
+    <item name="weather_page_air_pm2.5" type="id"/>
+    <item name="weather_page_air_head" type="id"/>
+    <item name="weather_page_air_foot" type="id"/>
 </resources>

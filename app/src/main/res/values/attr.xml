@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AirQualityView">
+        <attr name="first_text" format="string"/>
+        <attr name="second_text" format="string"/>
+        <attr name="third_text" format="string"/>
+        <attr name="progressValue" format="float"/>
+        <attr name="totalValue" format="float"/>
+        <attr name="progressPercent" format="float"/>
+    </declare-styleable>
+</resources>
