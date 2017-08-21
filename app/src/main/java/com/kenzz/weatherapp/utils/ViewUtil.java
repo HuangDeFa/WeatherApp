@@ -3,6 +3,7 @@ package com.kenzz.weatherapp.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -82,5 +83,15 @@ public class ViewUtil {
                 activity.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
             }
         }
+    }
+
+    /**
+     * 已知中线获取绘制文字的基线位置
+     * @param fontMetricsInt
+     * @param centerY 中线位置
+     * @return
+     */
+    public static float getBaseLine(Paint.FontMetricsInt fontMetricsInt,float centerY){
+        return centerY+(fontMetricsInt.bottom-fontMetricsInt.top)/2-fontMetricsInt.bottom;
     }
 }

@@ -37,11 +37,11 @@
         />
     </RelativeLayout>
     <!--Content Page-->
-    <com.kenzz.weatherapp.widget.AirQualityView
+    <com.kenzz.weatherapp.widget.SimpleChartView
         android:id="@+id/ab"
         android:layout_centerInParent="true"
         android:layout_height="70dp"
-        android:layout_width="70dp"
+        android:layout_width="match_parent"
         />
     <android.support.v4.view.ViewPager
         android:visibility="gone"
