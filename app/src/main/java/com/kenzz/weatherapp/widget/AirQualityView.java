@@ -16,6 +16,7 @@ import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.TypedValue;
+import android.view.GestureDetector;
 import android.view.View;
 
 import com.kenzz.weatherapp.R;
@@ -124,6 +125,7 @@ public class AirQualityView extends View {
         int x= (int) (w-mPaint.getStrokeWidth());
         mPath.reset();
         RectF rectF=new RectF(0,0,x,x);
+
 
         mPaint.setColor(mProgressColor);
         mPath.arcTo(rectF,startAngle,progressAngle,false);

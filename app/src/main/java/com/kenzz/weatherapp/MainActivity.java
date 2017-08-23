@@ -37,6 +37,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void setFullScreen() {
       ViewUtil.recoverStatusBar(this,0);
+
     }
 
     @Override
