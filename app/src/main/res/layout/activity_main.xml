@@ -38,11 +38,16 @@
     </RelativeLayout>
     <!--Content Page-->
     <com.kenzz.weatherapp.widget.SimpleChartView
+        android:visibility="gone"
         android:id="@+id/ab"
         android:layout_centerInParent="true"
         android:layout_height="70dp"
         android:layout_width="match_parent"
         />
+    <com.kenzz.weatherapp.widget.RefreshRecyclerView
+        android:id="@+id/myRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
     <android.support.v4.view.ViewPager
         android:visibility="gone"
         android:layout_alignParentTop="true"

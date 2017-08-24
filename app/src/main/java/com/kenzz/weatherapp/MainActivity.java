@@ -3,19 +3,33 @@ package com.kenzz.weatherapp;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.media.Image;
+import android.os.Build;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.PopupMenu;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.kenzz.weatherapp.activity.BaseActivity;
 import com.kenzz.weatherapp.activity.CityActivity;
 import com.kenzz.weatherapp.utils.ViewUtil;
+import com.kenzz.weatherapp.widget.CommonRecyclerViewHolder;
+import com.kenzz.weatherapp.widget.CommonRecyclerviewAdapter;
+import com.kenzz.weatherapp.widget.RefreshRecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends BaseActivity {
 
@@ -24,6 +38,15 @@ public class MainActivity extends BaseActivity {
     private ViewPager mContentPage;
     private RelativeLayout mBottomLayout;
     private PopupWindow mPopupMenu;
+
+    private RefreshRecyclerView mRecyclerView;
+    private List<String> mList;
+    {
+        mList=new ArrayList<>();
+        for(int i=0;i<50;i++){
+            mList.add("Item "+i);
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +98,37 @@ public class MainActivity extends BaseActivity {
                 startActivity(new Intent(MainActivity.this, CityActivity.class));
             }
         });
+
+        mRecyclerView=ViewUtil.findViewById(this,R.id.myRV);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
+        mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setRefreshListener(new RefreshRecyclerView.RefreshListener() {
+            @Override
+            public void onRefresh() {
+                mRecyclerView.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                       mRecyclerView.stopRefresh();
+                    }
+                },2000);
+            }
+        });
     }
+
+    private CommonRecyclerviewAdapter mAdapter=new CommonRecyclerviewAdapter<String>(mList) {
+        @Override
+        public void onBindView(CommonRecyclerViewHolder holder, int position) {
+            TextView tv= (TextView) holder.itemView;
+            tv.setText(mList.get(position));
+        }
+
+        @Override
+        public CommonRecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View itemView= LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1,parent,false);
+            return new CommonRecyclerViewHolder(itemView);
+        }
+    };
 
 }

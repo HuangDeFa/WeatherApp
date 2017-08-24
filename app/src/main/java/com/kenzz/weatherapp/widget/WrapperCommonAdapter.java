@@ -76,7 +76,7 @@ public class WrapperCommonAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     public boolean isHeaderViewType(int viewType) {
         int index = mHeaderViews.indexOfKey(viewType);
-        return index > 0;
+        return index >= 0;
     }
 
     public boolean isHeaderPosition(int position) {
@@ -106,7 +106,7 @@ public class WrapperCommonAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     public boolean isFooterViewType(int viewType) {
         int index = mFooterViews.indexOfKey(viewType);
-        return index > 0;
+        return index >=0;
     }
 
     public boolean isFooterPosition(int position) {
